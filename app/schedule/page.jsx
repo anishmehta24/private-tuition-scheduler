@@ -10,7 +10,6 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 );
 
-
 export default function Schedule() {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
@@ -37,7 +36,7 @@ export default function Schedule() {
         }
 
         const { data, error } = await supabase
-          .from('bookings')
+          .from('Schedule')
           .select('*')
           .eq('week', format(new Date(), 'yyyy-w'));
 
@@ -117,24 +116,24 @@ export default function Schedule() {
                   return (
                     <div
                       key={`${day}-${index}`}
-                      className={`flex justify-between items-center p-3 border border-gray-700 rounded-lg ${
+                      className={`flex justify-between items-center p-3 border ${
                         isBooked 
-                          ? 'bg-gray-900 opacity-75 cursor-not-allowed' 
-                          : 'bg-gray-800 hover:bg-gray-700'
-                      }`}
+                          ? 'border-red-800 bg-red-900/20' 
+                          : 'border-gray-700 bg-gray-800 hover:bg-gray-700'
+                      } rounded-lg transition-colors duration-200`}
                     >
                       <div className="flex flex-col">
                         <span className="text-white">
                           {slot.startTime} - {slot.endTime}
                         </span>
                         {isBooked && (
-                          <span className="text-xs text-gray-400">
+                          <span className="text-xs text-red-400">
                             Booked by: {bookedDetails?.name || 'Someone'}
                           </span>
                         )}
                       </div>
                       {isBooked ? (
-                        <span className="px-4 py-1 bg-red-600/50 text-white rounded-md select-none">
+                        <span className="px-4 py-1 bg-red-600 text-white rounded-md select-none">
                           Booked
                         </span>
                       ) : (
