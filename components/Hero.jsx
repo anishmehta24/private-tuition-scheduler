@@ -23,7 +23,7 @@ function Hero() {
               Welcome!
             </motion.span>
             <motion.span className="block" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.6 }}>
-              I'm <span className="text-purple-500">[Anish Mehta]</span>, your Physics Teacher
+              I'm <span className="text-purple-500">[Full Name]</span>, your Physics Teacher
             </motion.span>
           </motion.h1>
           <p className="text-gray-300 text-lg md:text-xl mb-6">

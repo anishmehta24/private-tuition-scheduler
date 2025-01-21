@@ -42,7 +42,7 @@ function Header() {
                         Schedule
                         <span className="absolute -bottom-1 left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
                     </a>
-                    <a href="/portfolio" className="relative font-bold group">
+                    <a href="/" className="relative font-bold group">
                         Testimonials
                         <span className="absolute -bottom-1 left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
                     </a>
@@ -52,11 +52,11 @@ function Header() {
                 {/* Contact Us Button */}
                 <div className="mr-4">
                     <a
-                        href="/contact"
+                        href="/services"
                         className="hidden md:block relative bg-purple-600 hover:bg-purple-700 px-4 py-3 rounded-lg font-bold text-white transition-all transform hover:scale-105 overflow-hidden"
                     >
                         <span className="absolute inset-0 bg-gradient-to-r from-purple-500 via-purple-400 to-purple-500 opacity-50 blur-lg animate-pulse"></span>
-                        <span className="relative">Sign In</span>
+                        <span className="relative">Book Now</span>
                     </a>
                 </div>
 
@@ -87,7 +87,7 @@ function Header() {
                        
                         <li>
                             <a
-                                href="/services"
+                                href="/schedule"
                                 className="block hover:text-purple-600"
                                 onClick={() => setMenuOpen(false)}
                             >
@@ -96,7 +96,7 @@ function Header() {
                         </li>
                         <li>
                             <a
-                                href="/portfolio"
+                                href="/"
                                 className="block hover:text-purple-600"
                                 onClick={() => setMenuOpen(false)}
                             >
@@ -105,11 +105,11 @@ function Header() {
                         </li>
                         <li>
                             <a
-                                href="/signin"
+                                href="/services"
                                 className="block bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-all transform hover:scale-105 mx-auto"
                                 onClick={() => setMenuOpen(false)}
                             >
-                                Sign In
+                                Book Now
                             </a>
                         </li>
                     </ul>
