@@ -4,7 +4,6 @@ import { format } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import {Suspense} from "react"
 import { useRouter } from 'next/navigation';
-import { URLSearchParams } from 'next/dist/compiled/@edge-runtime/primitives/url';
 
 // Initialize Supabase client
 const supabase = createClient(
