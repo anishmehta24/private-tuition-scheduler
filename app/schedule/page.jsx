@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
 import {Suspense} from "react"
 import { useRouter } from 'next/navigation';
+import { URLSearchParams } from 'next/dist/compiled/@edge-runtime/primitives/url';
 
 // Initialize Supabase client
 const supabase = createClient(
@@ -71,7 +72,7 @@ function ScheduleContent()  {
     };
 
     // Encode booking data for URL
-    const queryParams = new URLSearchParams(bookingData).toString();
+    const queryParams =  new URLSearchParams(bookingData).toString();
     router.push(`/booking?${queryParams}`);
   };
 
