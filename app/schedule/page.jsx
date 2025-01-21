@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { createClient } from '@supabase/supabase-js';
+import {Suspense} from "react"
 import { useRouter } from 'next/navigation';
 
 // Initialize Supabase client
@@ -10,7 +11,7 @@ const supabase = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || ''
 );
 
-export default function Schedule() {
+function ScheduleContent()  {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(true);
   const [bookings, setBookings] = useState({});
@@ -154,5 +155,13 @@ export default function Schedule() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function Schedule() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ScheduleContent />
+    </Suspense>
   );
 }

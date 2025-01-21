@@ -52,7 +52,7 @@ function Header() {
                 {/* Contact Us Button */}
                 <div className="mr-4">
                     <a
-                        href="/services"
+                        href="/schedule"
                         className="hidden md:block relative bg-purple-600 hover:bg-purple-700 px-4 py-3 rounded-lg font-bold text-white transition-all transform hover:scale-105 overflow-hidden"
                     >
                         <span className="absolute inset-0 bg-gradient-to-r from-purple-500 via-purple-400 to-purple-500 opacity-50 blur-lg animate-pulse"></span>
@@ -105,7 +105,7 @@ function Header() {
                         </li>
                         <li>
                             <a
-                                href="/services"
+                                href="/schedule"
                                 className="block bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-lg transition-all transform hover:scale-105 mx-auto"
                                 onClick={() => setMenuOpen(false)}
                             >
